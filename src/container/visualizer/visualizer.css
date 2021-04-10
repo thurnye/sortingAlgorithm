@@ -1,5 +1,13 @@
-.bar{
-    height: 50px;
-    margin-bottom:10px;
-    background: blue
+
+.container {
+    border: 2px solid black;
+    position:relative;
+
 }
+.bar{
+    border: 1px solid red;
+    display: inline-block;
+    margin: 0 0px;
+    width: 1px;
+}
+

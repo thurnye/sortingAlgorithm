@@ -17,8 +17,8 @@ export default class visualizer extends Component {
    }
     resetArray() {
         const array = [];
-        for (let i = 0; i < 100; i++){
-            array.push(randomIntFromInterval(5, 1000));
+        for (let i = 0; i < 300; i++){
+            array.push(randomIntFromInterval(10, 650));
             // console.log(array)
         }
         this.setState({array : array})
@@ -27,13 +27,18 @@ export default class visualizer extends Component {
     render() {
         const {array} = this.state;
         return (
-            <div>
+            <React.Fragment>
+            <div className="container">
            {
             array.map((val,idx) => {
-                return <div className='bar' key={idx} style={{width: `${val}px`}}> {val} </div>
+                return <div className='bar' key={idx} style={{height: `${val}px`}}>  </div>
                 })
             }
             </div>
+            <div class="button">
+                <button onClick = {() => this.resetArray()}> New Array</button>
+            </div>
+            </React.Fragment>
         )
     }
 }
